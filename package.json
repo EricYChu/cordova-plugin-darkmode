@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/openmove/cordova-darkmode-plugin.git"
+    "url": "git+https://github.com/EricYChu/cordova-plugin-darkmode.git"
   },
   "keywords": [
     "cordova",
@@ -22,7 +22,7 @@
   "author": "OpenMove team",
   "license": "Apache-2",
   "bugs": {
-    "url": "https://github.com/openmove/cordova-darkmode-plugin"
+    "url": "https://github.com/EricYChu/cordova-plugin-darkmode/issues"
   },
-  "homepage": "https://openmove.com"
+  "homepage": "https://github.com/EricYChu/cordova-plugin-darkmode"
 }

@@ -8,25 +8,12 @@ This is usefull in case Android WebView on user device is not updated or you are
 
 ### Install
 ```
-cordova plugin add cordova-plugin-darkmode
+cordova plugin add https://github.com/EricYChu/cordova-plugin-darkmode.git
 ```
 
 ### Example
 ```js
-darkmode.isDarkModeEnabled(
-    function(res){
-        //true/false
-        alert("Dark Mode: "+res);
-    }, function(err){
-        console.err(err);
-    });
-
-darkmode.isInversionEnabled(
-    function(res){
-        //true/false
-        alert("Inverted Colors: "+res);
-    },
-    function(err){
-        console.err(err);
-    });
+DarkMode.listen(enabled => {
+    console.log(enabled ? 'On' : 'Off')
+})
 ```

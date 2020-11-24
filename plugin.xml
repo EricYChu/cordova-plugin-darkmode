@@ -3,26 +3,24 @@
         id="cordova-plugin-darkmode"
         version="1.0.0">
 
-  <name>DarkMode</name>
+    <name>DarkMode</name>
 
-  <engines>
-    <engine name="cordova" version=">=3.4.0"/>
-  </engines>
+    <engines>
+      <engine name="cordova" version=">=9.0.0"/>
+      <engine name="cordova-android" version=">=9.0.0"/>
+    </engines>
 
-  <asset src="www/darkmode.js" target="js/darkmode.js"/>
+    <js-module name="DarkMode" src="www/darkmode.js">
+      <clobbers target="DarkMode"/>
+    </js-module>
 
-  <js-module src="www/darkmode.js" name="darkmode">
-    <clobbers target="darkmode" />
-  </js-module>
-
-  <platform name="android">
-	<config-file target="res/xml/config.xml" parent="/*">
-      <feature name="DarkMode">
-        <param name="android-package" value="com.openmove.darkmode.DarkMode"/>
-      </feature>
-    </config-file>
-	 <source-file src="src/android/DarkMode.java" target-dir="src/com/openmove/darkmode/"/>
-  </platform>
-
-
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="DarkMode">
+                <param name="android-package" value="cordova.plugins.darkmode.CDVDarkMode"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/CDVDarkMode.java" target-dir="src/cordova/plugins/darkmode"/>
+    </platform>
 </plugin>
